@@ -1,0 +1,238 @@
+body{
+    width: 80%;
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    }
+
+.contenedor-input{
+    width: 530px;
+    height: 460px;
+    background: rgba(0,0,0,0.7);
+    /*color:#fff;*/
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    align-content: center;
+    justify-content: center;  
+    margin-top: 50px;
+}
+
+.conten2{
+    
+    background: rgba(0,0,0,0.7);
+   
+    width: 330px;
+    height: 400px;
+   
+    top: 30%;
+   
+    left: 40%;
+    
+    position: absolute;
+    align-content: center;
+  
+    padding-top: 60px;
+    padding-left: 60px;
+    
+    border-radius: 5px;
+    
+    /*padding-right: 10px;
+    padding-bottom: 20px;*/
+        
+}
+
+input[id="val"]{
+    margin-left: 65px;
+    margin-bottom: 15px;
+}
+
+
+
+input{
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid darkgray;
+}
+
+.Caja-1{
+    width: 38%; 
+    height: 5%;
+    margin-left: 3%;
+    
+}
+
+input[id="Cedula"]{
+    margin-top: 5px;
+}
+
+
+
+.caja-2{
+    width: 92%;
+    height: 15%;
+    resize: none;
+    font-family: sans-serif;
+    font-size: 16Px;
+    margin-left: 3%;
+    }
+
+.btn-enviar{
+    position: relative;
+    top: 40px;
+    left: 35%;
+    background-color: #000; /* Green */
+    border: none;
+    color: white;
+    /*padding: 15px 32px;*/
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+   /* margin: 4px 2px;*/
+    cursor: pointer;
+    
+}
+
+.btn-enviar:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #fff;
+    transform: scale(1.05);
+    color: black;
+}
+
+.btn-enviar:active{
+    transform: scale(0.9);
+    
+}
+
+
+.user{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: calc(50% - 50px);
+}
+
+
+
+
+.btn-default2 {
+    background: #000;
+    color: #fff;
+}
+
+.btn-default2:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+.button {
+    background-color: #D32F2F; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 25px;
+    text-align: center;
+    text-decoration: none;
+    /*display: inline-block;*/
+    font-size: 12px;
+    /*margin-left: 90%;*/
+    float: right;
+    
+    
+    
+}
+
+
+.input-58{
+    width: 214.4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    justify-content: space-between;
+    font-size: 16px;
+    
+    
+    
+}
+
+.button:hover{
+    background: #EF5350;
+    color: black;
+}
+
+
+.button:active{
+    transform: scale(0.8);
+}
+
+.salir{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-right: 10px;
+}
+
+.regi{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background: black;
+}
+
+
+.regi:hover{
+    background: white;
+    color:black;
+    
+}
+    
+   
+.des{
+    background: black;
+}
+
+.des:hover{
+    background: white;
+    color:black;
+}
+
+
+.error{
+    background-color: #E74F4F;
+    position: absolute;
+    top: 0;
+    padding: 10px 0 ;
+    border-radius:  0 0 5px 5px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+
+
+.test{
+    color:white;
+}
+
+.pos5{
+    margin-left: 60%;
+    position: absolute;
+    
+}
+

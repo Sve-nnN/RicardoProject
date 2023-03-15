@@ -28,9 +28,11 @@ session_start();
 
             <h2 style="text-align:center" class="test">Nuevo Registro de Producto</h2>
 
-            <input type="text" id="id_nombre" name="id_nombre" placeholder="ID_Producto" class="Caja-1" title="Introducir id del Producto" tabindex="1" required>
+            <input type="text" id="id_nombre" name="id_nombre" placeholder="ID_Producto" class="Caja-1"
+                title="Introducir id del Producto" tabindex="1" required>
 
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="Caja-1" title="Introducir Nombre" tabindex="2" required>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" class="Caja-1" title="Introducir Nombre"
+                tabindex="2" required>
 
             <select name="tipo" class="input-58" tabindex="3">
                 <option>Tipo:</option>
@@ -41,13 +43,16 @@ session_start();
 
             <!--input type="text" id="Nacionalidad" name="Nacionalidad" placeholder="Nacionalidad" class="Caja-1" title="Introducir Nacionalidad" required-->
 
-            <input type="text" id="modelo" name="modelo" placeholder="Modelo" class="Caja-1" title="Introducir Modelo" tabindex="4" required>
+            <input type="text" id="modelo" name="modelo" placeholder="Modelo" class="Caja-1" title="Introducir Modelo"
+                tabindex="4" required>
 
 
 
-            <input type="text" id="stock" name="stock" placeholder="Stock" class="Caja-1" title="Introducir Numero de Stock" tabindex="5" required>
+            <input type="text" id="stock" name="stock" placeholder="Stock" class="Caja-1"
+                title="Introducir Numero de Stock" tabindex="5" required>
 
-            <input type="text" id="distribuidor" name="distribuidor" placeholder="Distribuidor" class="Caja-1" title="Nombre del Distribuidor" tabindex="6" required>
+            <input type="text" id="distribuidor" name="distribuidor" placeholder="Distribuidor" class="Caja-1"
+                title="Nombre del Distribuidor" tabindex="6" required>
 
             <select name="marca" class="input-58" tabindex="7">
                 <option>Marca:</option>
@@ -61,16 +66,19 @@ session_start();
 
             <!--input type="text" id="sexo" name="sexo" placeholder="Sexo" class="Caja-1" title="Introducir Sexo" required-->
 
-            <input type="date" id="fecha" name="fecha" placeholder="Fecha de Adq" class="Caja-1" title="Introducir Fecha" tabindex="8" required>
+            <input type="date" id="fecha" name="fecha" placeholder="Fecha de Adq" class="Caja-1"
+                title="Introducir Fecha" tabindex="8" required>
 
-            <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion" class="Caja-1" title="Describa el Producto" tabindex="6" required>
+            <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion" class="Caja-1"
+                title="Describa el Producto" tabindex="6" required>
 
 
 
 
             <!--input type="text" id="escolaridad" name="escolaridad" placeholder="Escolaridad" class="Caja-1" title="Introducir Escolaridad" required-->
 
-            <input type="text" id="costo" name="costo" placeholder="Costo en $" class="Caja-1" title="Costo de Entrada" tabindex="6" required>
+            <input type="text" id="costo" name="costo" placeholder="Costo en $" class="Caja-1" title="Costo de Entrada"
+                tabindex="6" required>
 
 
 

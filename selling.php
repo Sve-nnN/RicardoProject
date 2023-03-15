@@ -2,18 +2,6 @@
 
 include 'conexion.php';
 
-session_start();
-if (isset($_SESSION['user'])) {
-    if ($_SESSION['user']['tipo'] != "2") {
-        header("location: Tecnico.php");
-    }
-} else{
-    header("location: Admin.php");
-}
-
-
-
-
 
 $where = "";
 
@@ -26,9 +14,8 @@ if (!empty($_POST)) {
 }
 
 
-$sql = "SELECT * FROM estudiantes $where";
+$sql = "SELECT * FROM venta $where";
 $resultado = $mysqli->query($sql);
-
 
 ?>
 
@@ -44,10 +31,7 @@ $resultado = $mysqli->query($sql);
     <link href="css/style.css" rel="stylesheet">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
-
-
-    <title>Administrador</title>
+    <title>Listado de Productos en Stock</title>
 </head>
 
 <body>
@@ -55,7 +39,7 @@ $resultado = $mysqli->query($sql);
     <div class="container">
 
         <div class="row">
-            <h2 style="text-align:center"> Registro de Productos </h2>
+            <h2 style="text-align:center"> Listado de Productos </h2>
 
         </div>
         <div class="row">
@@ -66,13 +50,13 @@ $resultado = $mysqli->query($sql);
 
                 <div class="input-group col-xs-4 posicion3">
 
-                    <input type="text" class="form-control" placeholder="ID_Producto" id="campo" name="campo">
+                    <input type="text" class="form-control" placeholder="ID" id="campo" name="campo">
 
                     <div class="input-group-btn">
                         <button class="btn btn-default" id="enviar" name="enviar" type="submit"><i
                                 class="glyphicon glyphicon-search"></i></button>
-                        <a href="descargas/ayuda.pdf" class="btn btn-default2">Ayuda</a>
-                        <a href="salir.php" class="btn btn-danger">Salir</a>
+
+                        <a href="Tecnico.php" class="btn btn-danger">Regresar</a>
                     </div>
 
                 </div>
@@ -115,9 +99,6 @@ $resultado = $mysqli->query($sql);
                             <td><?php echo $row['descripcion'];  ?></td>
                             <td><a href="modificar.php?id=<?php echo $row['id']; ?>"><span
                                         class="glyphicon glyphicon-pencil"></span></a></td>
-                            <td><a href="#" data-href="eliminar.php?id=<?php echo $row['id']; ?>" data-toggle="modal"
-                                    data-target="#confirm-delete"><span class="glyphicon glyphicon-trash"></span></a>
-                            </td>
                         </tr>
                         <?php } ?>
                     </tbody>
@@ -125,37 +106,9 @@ $resultado = $mysqli->query($sql);
             </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <p><strong></strong></p>
-        <a class="btn btn-default" href="fpdf/index.php">Generar PDF</a>
-        <br>
-    </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Eliminar Registro</h4>
-                </div>
-                <div class="modal-body">
-                    ¿Desea eliminar este registro?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger btn-ok">Delete</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-    $('#confirm-delete').on('show.bs.modal', function(e) {
-        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
-        $('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
-    });
-    </script>
+
+
 </body>
 
 </html>

@@ -131,3 +131,14 @@ input[type="submit"]:active {
   background-color: white;
   padding: 5px;
 }
+.doble {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.contenedor-doble {
+  text-align: center;
+  background-color: rgb(178, 178, 178);
+}

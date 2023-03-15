@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_SESSION['user'])) {
     if ($_SESSION['user']['tipo'] == "2") {
-        header("location: Admin.php");
+        header("location: admin.php");
     } else if ($_SESSION['user']['tipo'] == "1") {
         header("location: Tecnico.php");
     }
@@ -16,8 +16,7 @@ if (isset($_SESSION['user'])) {
 <head>
     <title>Formulario de Login</title>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimun-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimun-scale=1">
     <link rel="stylesheet" href="css/estilos.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/main.js"></script>
@@ -36,11 +35,9 @@ if (isset($_SESSION['user'])) {
             <h2>Gestor de Inventario</h2>
             <img src="jpg/user.png" class="user">
             <p>Usuario</p>
-            <input type="text" placeholder="&#128187; Usuario" pattern="[A-Za-z0-9_-]{4,15}" autocomplete="off"
-                name="usuario" class=caja>
+            <input type="text" placeholder="&#128187; Usuario" pattern="[A-Za-z0-9_-]{4,15}" autocomplete="off" name="usuario" class=caja>
             <p>Contraseña</p>
-            <input type="password" placeholder="&#128273; Contraseña" pattern="[A-Za-z0-9_-]{4,15}" required
-                name="clave" class=caja>
+            <input type="password" placeholder="&#128273; Contraseña" pattern="[A-Za-z0-9_-]{4,15}" required name="clave" class=caja>
             <input type="submit" value="Ingresar" class="boton">
             <br>
             <p style="font-size:12px">¿Olvidaste la contraseña? <a href="recupera.php" class="text">Recuperar

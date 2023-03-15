@@ -2,19 +2,18 @@
 
 include 'conexion.php';
 
-$marca = $_POST["marca"];
-$modelo = $_POST["modelo"];
-$id_nombre = $_POST["id_nombre"];
+
+//SEPARADOR
+
+
+$usuario = $_POST["usuario"];
+$clave = $_POST["clave"];
 $nombre = $_POST["nombre"];
-$stock = $_POST["stock"];
-$distribuidor = $_POST["distribuidor"];
-$fecha = $_POST["fecha"];
 $tipo = $_POST["tipo"];
-$costo = $_POST["costo"];
-$descripcion = $_POST["descripcion"];
+$contrato = $_POST["contrato"];
+$cedula = $_POST["cedula"];
 
-
-$insertar = "INSERT INTO estudiantes(marca, modelo, id_nombre, nombre, stock, distribuidor, fecha, tipo, costo, descripcion) VALUES ('$marca','$modelo','$id_nombre','$nombre','$stock','$distribuidor','$fecha','$tipo','$costo','$descripcion')";
+$insertar = "INSERT INTO usuarios(usuario, clave, nombre, tipo, contrato, cedula) VALUES ('$usuario','$clave','$nombre','$tipo','$contrato','$cedula')";
 $resultado = $mysqli->query($insertar);
 
 
@@ -38,12 +37,11 @@ $resultado = $mysqli->query($insertar);
             <div class="row" style="text-align:center">
                 <?php if ($resultado) { ?>
                     <script>
-                        alert("Registro guardado con exito. Regresa a la página anterior")
-                    </script>
-                <?php header("location: Tecnico.php");
-                } else { ?>
+                        alert("Usuario creado con exito. Regresa a la pantalla principal")
+                    </script> <?php header("location: Admin.php");
+                            } else { ?>
                     <script>
-                        alert("Ha ocurrido un error al guardar el registro. Intentalo nuevamente")
+                        alert("Ocurrio un error creando un usuario, intentalo de nuevo mas tarde.")
                     </script>
                 <?php } ?>
                 <a href="Tecnico.php" class="btn btn-default2"> Regresar</a>

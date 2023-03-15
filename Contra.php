@@ -18,9 +18,9 @@ if($usuarios->num_rows == 1):
 
 if(isset($_SESSION['user'])){
     
-        if($_SESSION['user']['tipo'] == "2"){
+        if($_SESSION['user']['usuatio'] == "admin"){
             header("location: adminclave.php");
-        }else if($_SESSION['user']['tipo'] == "1") {
+        }else{
             header("location: tecnicoclave.php");
         }
     }
@@ -37,6 +37,3 @@ endif;
 
 
 $mysqli->close();
-
-
-?>
